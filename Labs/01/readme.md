@@ -9,7 +9,8 @@ Q2 : ![image](https://github.com/fasihh/pfFall23/assets/47947561/d5d55c35-4148-4
 
 Q3 : ![image](https://github.com/fasihh/pfFall23/assets/47947561/65bc523d-3dd7-4446-a5c3-a73e2077d5da)
  
-Q4 : [img]
+Q4 : ![image](https://github.com/fasihh/pfFall23/assets/47947561/d50e0c3f-3da7-45e8-99f9-e13d39dc6141)
+
 Q5 : [img] 
 Q6 : [img]
 Q7 : [img]
