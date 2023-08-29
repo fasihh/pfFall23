@@ -20,3 +20,4 @@
 ![image](https://github.com/fasihh/pfFall23/assets/47947561/c4de45e6-d666-4505-8a2d-f35bb65ea8a2)
 
 ### Q7:
+![image](https://github.com/fasihh/pfFall23/assets/47947561/7a8d65b0-2780-4a65-bf06-7028ee7da3d3)
