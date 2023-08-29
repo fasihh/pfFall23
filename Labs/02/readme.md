@@ -1,4 +1,4 @@
-# Fasih Hasan Khan
+![image](https://github.com/fasihh/pfFall23/assets/47947561/b6561854-c135-4ef9-a858-fd7b9d73b3cb)# Fasih Hasan Khan
 ## 23K-0018
 
 ### Q1:
@@ -11,9 +11,7 @@
 ![image](https://github.com/fasihh/pfFall23/assets/47947561/f11953a4-b0f9-4b9d-8693-fa6f639f6ee3)
 
 ### Q4:
-![image](https://github.com/fasihh/pfFall23/assets/47947561/9526e05e-78cb-4937-8107-608d9f651187)
-
-![image](https://github.com/fasihh/pfFall23/assets/47947561/b17835e6-0454-4588-b69e-c8866bca3c96)
+![image](https://github.com/fasihh/pfFall23/assets/47947561/7dde5342-16c5-4837-b5e4-34b6d3b7d053)
 
 ### Q5:
 ![image](https://github.com/fasihh/pfFall23/assets/47947561/0151e238-527d-4c51-ae59-9270dd76672b)
