@@ -12,7 +12,7 @@
 ![image](https://github.com/fasihh/pfFall23/assets/47947561/1b2e6b31-ec03-4def-9c7c-2d280c43cf21)
 
 ### Problem 4:
-![image](https://github.com/fasihh/pfFall23/assets/47947561/93e92492-6254-49dd-8437-1b31d9cb5a9d)
+![image](https://github.com/fasihh/pfFall23/assets/47947561/c6d9b049-d0a3-4057-b97d-f043d93a4f50)
 
 ### Problem 5:
 ![image](https://github.com/fasihh/pfFall23/assets/47947561/76d03a5e-2b2d-4400-a613-c07ab31187b0)
