@@ -2,6 +2,6 @@
 ## 23K-0018
 
 # Q7
-![image](https://github.com/fasihh/pfFall23/assets/47947561/6d09cd49-ea9d-482e-aaff-9862fa70369c)
-![image](https://github.com/fasihh/pfFall23/assets/47947561/aceb1c4a-8806-4e8c-b0a9-e5b5e0d4edbf)
-![image](https://github.com/fasihh/pfFall23/assets/47947561/2aa6a187-5a97-417d-a1a1-14cdef4feb65)
+![image](https://github.com/fasihh/pfFall23/assets/47947561/bffe718d-81e6-4e27-adfd-05d6dc71b32e)
+![image](https://github.com/fasihh/pfFall23/assets/47947561/0ea9bb09-90c9-4b21-8028-66ee0808aba4)
+![image](https://github.com/fasihh/pfFall23/assets/47947561/58923d70-bc05-4674-89ff-21504051e503)
