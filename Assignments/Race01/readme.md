@@ -26,3 +26,6 @@
 
 ### Problem 8:
 ![image](https://github.com/fasihh/pfFall23/assets/47947561/34e815f7-c278-4eab-8819-9d6747040eb9)
+
+### Problem 9:
+![image](https://github.com/fasihh/pfFall23/assets/47947561/2a00da3d-e439-4959-95d6-7729a19a8327)
