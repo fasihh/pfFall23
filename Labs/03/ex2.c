@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void main() {
+int main() {
 	int x, y, z;
 	x=0;y=0;z=0;
 
@@ -11,4 +11,5 @@ void main() {
 
 	printf("Volume is: %d", x*y*z);
 		
+	return 0;
 }; // end main()
