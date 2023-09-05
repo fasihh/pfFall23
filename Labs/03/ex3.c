@@ -4,6 +4,8 @@
 void main() {
 	float opp, adj;
 
+	printf("Hypotenus of triangle\n\n");
+
 	printf("Input perpendicular of triangle: ");
 	scanf("%f", &opp);
 
