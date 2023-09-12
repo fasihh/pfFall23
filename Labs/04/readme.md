@@ -18,6 +18,7 @@
 
 ## Task 6:
 ![image](https://github.com/fasihh/pfFall23/assets/47947561/3d23fdd4-ddb6-44fb-9ddf-14cd1080b77f)
+flowchart continues
 ![image](https://github.com/fasihh/pfFall23/assets/47947561/f1b48293-121b-413d-9551-284f66eff70b)
 
 ## Task 7:
