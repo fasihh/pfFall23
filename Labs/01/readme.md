@@ -1,6 +1,6 @@
 # Fasih Hasan Khan
 ## 23K-0018
-### Studied A levels and O levels from The City School PAF and Johor campus. We talked about the swimming pool and the gym during the class. 
+### Studied A levels and O levels from The City School PAF and Johor campus. 
 
 
 Q1 : ![image](https://github.com/fasihh/pfFall23/assets/47947561/91d4d307-cd1e-426d-8652-bd34ca49d659)
