@@ -58,6 +58,7 @@ void main() {
 	// making the lower half of the pattern
 	while (i < n) {
 
+		// left side
 		j = 0;
 		while (j < i) {
 			printf(" ");
@@ -65,6 +66,7 @@ void main() {
 		}
 		printf("*");
 
+		// right side
 		j = 0;
 		while (j < r) {
 			printf(" ");
