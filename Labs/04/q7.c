@@ -1,29 +1,41 @@
 /*
  * Creator: Fasih Hasan
  * Date: 12/9/23
- * Description: Printing pattern by taking 'n' as input
+ * Description: Identifying whether word is palindrome or not
  */
 
 // included libs
 #include <stdio.h>
 
-void main() {
-	int n, i, j; // row count for '*', counter for rows, counter for '*'
-	i = 0, j = 0; // initialize i and j
+int main() {
+	int n, i; // initializing n for number of characters and i for counter
 
-	printf("Input any number 'n': ");
+	char wordArray[100] = {' '}; // initializing list with ' ' to indicate it's empty
+	i = 0;
+
+	printf("Length of word: ");
 	scanf("%d", &n);
 
-	while (i < n){
-		
-		// adding '*'
-		j = 0;
-		while (j <= i) {
-			printf("*");
-			j++;
-		} 		
-		printf("\n"); // starting new line
+	while (i < n) {
+		printf("Input character: ");
+		scanf(" %c", &wordArray[i]);
+
 		i++;
 	}
+
+	i = 0;
+	while (i < n / 2) {
+
+		// check if letters are equal
+		if (wordArray[i] != wordArray[n - i - 1]) {
+			printf("Word is not palindrome");
+			return 0; // exit function if not palindrome
+		}
+
+		i++;
+	}
+
+	printf("Word is palindrome");	
+	return 1;
 
 }// end main
