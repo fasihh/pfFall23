@@ -25,19 +25,17 @@ void main() {
 		}
 		printf("*");
 		
-		while (r < k) {
-			printf(" ");
-			r++;
-		}
-
+		
+		r = 0;
 		if (k - 1) {
 			printf("*");
+			while (r < k) {
+				printf(" ");
+				r++;
+			}
 		}
-		
 		k += 2;
 
-		
-		
 		printf("\n"); // starting new line
 		i--;
 	}
