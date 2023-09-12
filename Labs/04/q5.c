@@ -10,7 +10,7 @@
 int main() {
 	int datePerson1, monthPerson1, yearPerson1; // birthDate, birthMonth, birthYear of person1
 	int datePerson2, monthPerson2, yearPerson2; // birthDate, birthMonth, birthYear of person2
-	int dateDiff, monthDiff, yearDiff; 
+	int dateDiff, monthDiff, yearDiff; // diifference in their ages 
 
 	printf("Input DOB of person1 in format dd/mm/yyyy: ");
 	scanf("%d/%d/%d", &datePerson1, &monthPerson1, &yearPerson1);
