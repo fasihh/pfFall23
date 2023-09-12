@@ -31,7 +31,7 @@ int main() {
 	} else if (!yearDiff && !monthDiff && dateDiff > 0) {
 		printf("person2 is older");
 		return 1; 
-	} else if (!yearDiff && !monthDiff && !dateDiff) {
+	} else {
 		printf("Same age");
 		return 1;
 	}
