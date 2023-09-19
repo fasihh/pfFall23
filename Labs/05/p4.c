@@ -1,3 +1,9 @@
+/*
+ * Creator: Fasih Hasan
+ * Date: 19/9/23
+ * Description: Calculator using switch case
+ */
+
 #include <stdio.h>
 
 void main() {
@@ -24,7 +30,7 @@ void main() {
 			printf("answer: %d", num1 * num2);
 			break;
 		case '/':
-			printf("answer: %d", num1 / num2);
+			printf("answer: %.4f", (float) num1 / num2);
 			break;
 	}
-}
+} // end main()
