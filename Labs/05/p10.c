@@ -13,6 +13,11 @@ void main() {
 	printf("Input 8-bit number: ");
 	scanf("%d", &num);
 
+	// exiting if not at least 2 bits
+	if (num < 10) {
+		return;
+	}
+
 	// finding the 4bits at the start
 	back = num / 10000;
 
