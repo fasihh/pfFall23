@@ -1,3 +1,9 @@
+/*
+ * Creator: Fasih Hasan
+ * Date: 19/9/23
+ * Description: Give appropriate greetings for certain times
+ */
+
 #include <stdio.h>
 
 void main() {
