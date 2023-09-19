@@ -1,3 +1,8 @@
+/* 
+ * Fasih Hasan Khan
+ * Description: Calculator
+ */
+
 #include <stdio.h>
 
 int main() {
@@ -6,6 +11,7 @@ int main() {
 
 	printf("Operations -> '+', '-', '*', '/' OR press 'E' to exit.\n");
 
+	// infinite loop until user exits
 	do {
 		// userChoice
 		printf("Input choice: ");
