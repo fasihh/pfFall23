@@ -1,5 +1,5 @@
 /* 
- * Fasih Hasan Khan
+ * Fasih Hasan
  * Description: Calculator
  */
 
