@@ -29,4 +29,4 @@
 ![image](https://github.com/fasihh/pfFall23/assets/47947561/32915737-80a4-47df-8140-f098c3966d42)
 
 ## Q10
-![image](https://github.com/fasihh/pfFall23/assets/47947561/40377fc3-5c40-4903-96bc-601fbac7eb44)
+![image](https://github.com/fasihh/pfFall23/assets/47947561/665a651d-1e62-4201-a0b3-eafeed218373)
