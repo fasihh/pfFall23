@@ -1,3 +1,8 @@
+/* 
+ * Fasih Hasan Khan
+ * Description: Find discount on a price
+ */
+
 #include <stdio.h>
 
 void main() {
