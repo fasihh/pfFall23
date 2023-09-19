@@ -1,3 +1,8 @@
+/* 
+ * Fasih Hasan Khan
+ * Description: Fuel consumption calculator
+ */
+
 #include <stdio.h>
 
 void main() {
