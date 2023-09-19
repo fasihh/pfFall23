@@ -16,16 +16,15 @@ void main() {
 	// checking what criteria final cost meets
 	if (actualTotal >= 2000 && actualTotal <= 4000) {
 		saved = actualTotal * 0.2;
-		total = actualTotal - saved;
 	} else if (actualTotal >= 4001 && actualTotal <= 6000) {
 		saved = actualTotal * 0.3;
-		total = actualTotal - saved;
 	} else if (actualTotal >= 6001) {
 		saved = actualTotal * 0.5;
-		total = actualTotal - saved;
 	} else {
 		total = actualTotal;
 	}
+
+	total = actualTotal - saved;
 
 	printf("\n---------------------------------------------------------------\n\n");
 
