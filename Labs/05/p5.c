@@ -1,3 +1,9 @@
+/*
+ * Creator: Fasih Hasan
+ * Date: 19/9/23
+ * Description: Determine what type of character is input
+ */
+
 #include <stdio.h>
 
 void main() {
@@ -7,6 +13,7 @@ void main() {
 	printf("Input any character: ");
 	scanf(" %c", &userInput);
 
+	// converting character to the equivalent integer value 
 	digit = (int) userInput;
 
 	if (digit >= 97 && digit <= 122) {
@@ -18,4 +25,4 @@ void main() {
 	} else {
 		printf("Special case character");
 	}
-}
+} // end main()
