@@ -1,7 +1,7 @@
 /*
  * Creator: Fasih Hasan
  * Date: 19/9/23
- * Description: Give appropriate greetings for certain times
+ * Description: Prompts for deleting an item using switch case
  */
 
 #include <stdio.h>
@@ -10,10 +10,12 @@ void main() {
 	char choice = ' ';
 	int flag = 1;
 
+	// infinite loop until meaningful value
 	while (flag) {
 		printf("Are you sure to delete? [Y/y] / [N/n]: ");		
 		scanf(" %c", &choice);
 
+		// converting lower cases to upper case
 		if (choice == 'y') {
 			choice = 'Y';
 		} else if (choice == 'n') {
