@@ -1,3 +1,8 @@
+/* 
+ * Fasih Hasan Khan
+ * Description: Find hyoptenus of a rigth angle triangle
+ */
+
 #include <stdio.h>
 #include <math.h>
 
