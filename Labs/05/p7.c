@@ -7,39 +7,29 @@
 #include <stdio.h>
 
 void main() {
-	int items, actualTotal, price, total;
-	total = 0, actualTotal = 0;
+	int actualTotal, total, saved;
+	total = 0, actualTotal = 0, saved = 0;
 
-	printf("Input amount of items: ");
-	scanf("%d", &items);
-
-	// get items one by one 
-	while (items--) {
-		printf("Input price of item: ");
-		scanf("%d", &price);
-
-		// keeping track of actual amount side by side
-		actualTotal = actualTotal + price;
-
-		if (price > 1999) {
-			price = price * 0.5;
-		}
-	
-		// saved amount total
-		total = total + price;
-	}
-
-	printf("Actual amount: %d\n", actualTotal);
-	printf("Saved amount: %d\n", total);
+	printf("Input total amount: ");
+	scanf("%d", &actualTotal);
 
 	// checking what criteria final cost meets
-	if (total >= 2000 && total <= 4000) {
-		total = total - (total * 0.2);
-	} else if (total >= 4001 && total <= 6000) {
-		total = total - (total * 0.3);
-	} else if (total >= 6001) {
-		total = total * 0.5;
+	if (actualTotal >= 2000 && actualTotal <= 4000) {
+		saved = actualTotal * 0.2;
+		total = actualTotal - saved;
+	} else if (actualTotal >= 4001 && actualTotal <= 6000) {
+		saved = actualTotal * 0.3;
+		total = actualTotal - saved;
+	} else if (actualTotal >= 6001) {
+		saved = actualTotal * 0.5;
+		total = actualTotal - saved;
+	} else {
+		total = actualTotal;
 	}
 
-	printf("Discounted amount: %d", total);
+	printf("\n---------------------------------------------------------------\n\n");
+
+	printf("Actual amount: %d\n", actualTotal);
+	printf("Final amount: %d\n", total);
+	printf("Saved: %d", saved);
 } // end main()
