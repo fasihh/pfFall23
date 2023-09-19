@@ -1,5 +1,5 @@
 /* 
- * Fasih Hasan Khan
+ * Fasih Hasan
  * Description: Find hyoptenus of a rigth angle triangle
  */
 
