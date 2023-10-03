@@ -15,6 +15,7 @@ int main() {
     int i = 0;
     while (++i < n) {
         if (!(n % i)) {
+            // if divisible then add to total
             total += i;
         }
     }
