@@ -18,12 +18,12 @@ int main() {
         scanf("%d", &arr[i]);
     }
 
-    printf("Enter pivot: ");
+    printf("\nEnter pivot: ");
     scanf("%d", &d);
 
     for (int k = d; k > 0; k--) {
-        printf("%d\n", arr[k]);
-        for (int j = k; j <= N; j++) {
+        for (int j = k; j < N; j++) {
+            printf("%d\n", arr[j]);
             int temp = arr[j - 1];
             arr[j - 1] = arr[j];
             arr[j] = temp;
