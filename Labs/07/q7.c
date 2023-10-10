@@ -32,7 +32,7 @@ void multiplyMatrix(int *mat1, int *mat2, int *ans, int n) {
             }
         }
     }
-}
+} // end multiplyMatrix(int *, int *, int *, int)
 
 int main() {
     int matrix1[100], matrix2[100], ans[100] = {0};
