@@ -23,8 +23,8 @@ void rotateElements(int *arr, int N, int p) {
 } // end showArray(int *, int, int)
 
 int main() {
-    int arr[100] = {1, 2, 3, 4, 5};
-    int N = 5, d = 0;
+    int arr[100];
+    int N, d;
     do {
         printf("Enter elements: ");
         scanf("%d", &N);
