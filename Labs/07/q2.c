@@ -6,8 +6,25 @@
 
 #include <stdio.h>
 
+void showArray(int *arr, int N) {
+    for (int n = 0; n < N; n++) {
+        printf("%d ", *(arr + n));
+    }
+} // end showArray(int *, int)
+
+void rotateElements(int *arr, int N, int p) {
+    for (int k = p - 1, c = 0; k >= 0; k--, c++) {
+        for (int j = k; j + 1 < N - c; j++) { 
+            int temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+        }
+    }
+} // end showArray(int *, int, int)
+
 int main() {
-    int arr[100], N, d;
+    int arr[100] = {1, 2, 3, 4, 5};
+    int N = 5, d = 0;
     do {
         printf("Enter elements: ");
         scanf("%d", &N);
@@ -16,23 +33,14 @@ int main() {
     for (int i = 0; i < N; i++) {
         printf("Enter element: ");
         scanf("%d", &arr[i]);
-    }
+    } 
 
     printf("\nEnter pivot: ");
     scanf("%d", &d);
 
-    for (int k = d; k > 0; k--) {
-        for (int j = k; j < N; j++) {
-            printf("%d\n", arr[j]);
-            int temp = arr[j - 1];
-            arr[j - 1] = arr[j];
-            arr[j] = temp;
-        }
-    }
+    rotateElements(arr, N, d);
     
-    for (int n = 0; n < N; n++) {
-        printf("%d ", arr[n]);
-    }
+    showArray(arr, N);
 
     return 0;
 } // end main()
