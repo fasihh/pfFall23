@@ -27,8 +27,8 @@ void takeInput(int *mat, int n) {
 void multiplyMatrix(int *mat1, int *mat2, int *ans, int n) {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
-            for (int k = 0, l = 0; k < n; k++, l++) {
-                *(ans + i*n + j) += *(mat1 + i*n + l) * *(mat2 + k*n + j);
+            for (int k = 0; k < n; k++) {
+                *(ans + i*n + j) += *(mat1 + i*n + k) * *(mat2 + k*n + j);
             }
         }
     }
