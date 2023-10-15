@@ -1,6 +1,6 @@
 /*
  * Creator: Fasih Hasan Khan
- * Date: 10/10/23
+ * Date: 15/10/23
  * Description: prints out a man of size 'n' where n is odd.
  */
 
