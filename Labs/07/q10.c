@@ -18,26 +18,23 @@ int input(int *arr) {
         scanf("%d", &(*(arr + i)));
     }
     return n;
-} 
+} // end input(int *)
 
 void subarray(int *arr, int n, int s) {
-    for (int i = 0, sum; i < n; i++) {
-        sum = 0;
-        for (int j = i; j < n && sum < s; j++) {
+    for (int i = 0; i < n; i++) {
+        for (int j = i, sum = 0; j < n && sum < s; j++) {
             sum += arr[j];
-            if (sum == s) {
-                printf("%d to %d", i, j);
-                return;
-            }
+            if (sum == s) { printf("%d to %d", i, j); return; }
         }
     }
     printf("No subarray");
     return;
-} 
+} // end subarray(int *, int, int)
 
 int main() {
-    int arr[100] = {0};
+    int arr[100] = {1, 2, 3, 7, 5};
     int s;
+
     int n = input(arr);
 
     printf("Enter 's': ");
