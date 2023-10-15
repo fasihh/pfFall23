@@ -24,6 +24,7 @@ void subarray(int *arr, int n, int s) {
     for (int i = 0; i < n; i++) {
         for (int j = i, sum = 0; j < n && sum < s; j++) {
             sum += arr[j];
+            // checking sum after adding to see if it's equal to user input
             if (sum == s) { printf("%d to %d", i, j); return; }
         }
     }
