@@ -33,7 +33,7 @@ void subarray(int *arr, int n, int s) {
 } // end subarray(int *, int, int)
 
 int main() {
-    int arr[100] = {1, 2, 3, 7, 5};
+    int arr[100];
     int s;
 
     int n = input(arr);
