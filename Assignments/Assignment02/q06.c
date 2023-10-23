@@ -20,19 +20,22 @@ int main()
 	printf("Enter sum: ");
 	scanf("%d", &sum);
 
+	// find pair for each number
 	for (int i = 0; i < n; i++) {
 		for (int j = i + 1; j < n; j++) {
 			if (arr[i] + arr[j] == sum) {
+				// add values as a pair to the pairs array
 				pairs[count++] = arr[j], pairs[count++] = arr[i];
 				break;
 			}
 		}
 	}
 
+	// output pairs
 	for (int i = 0; i < count;) {
 		printf("(%d, %d)", pairs[i++], pairs[i++]);
 		if (i != count) printf(", ");
 	}
 
 	return 0;
-}
+} // main()
