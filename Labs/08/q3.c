@@ -27,7 +27,7 @@ int main() {
     return 0;
 } // main()
 
-// thing. c has to be initialized with -1
+// thing. i has to be initialized with -1
 int count_rec(char *s, char c, int i) 
 {
     return (s == NULL) ? (!s) ? i+1 : i : count_rec(strchr(s+1, c), c, i+1);
