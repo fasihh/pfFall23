@@ -26,3 +26,9 @@ int main() {
 
     return 0;
 } // main()
+
+// thing
+int count_recursions(char *str, char ch, int c) 
+{
+    return (str == NULL) ? (!str) ? c+1 : c : count_recursions(strchr(str+1, ch), ch, c+1);
+}
