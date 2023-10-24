@@ -9,14 +9,8 @@
 
 int count(char *str, char ch) {
     int c = 0;
-    char *locate = strchr(str, ch);
-
-    while (locate != NULL && *locate == ch) {
-        locate = strchr(locate + 1, ch);
-        c++;
-    }
-
-    return c; 
+    for (char *ptr = strchr(str, ch); ptr != NULL; ptr = strchr(ptr + 1, ch)) c++;
+    return c;  
 } // count(char *, char)
 
 int main() {
