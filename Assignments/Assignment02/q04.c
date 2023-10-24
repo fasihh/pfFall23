@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-#define marked 'V'
+const char marked = 'V';
 
 int create_path(char maze[5][5], int s_i, int s_j) 
 {
@@ -38,12 +38,16 @@ void show_path(char maze[5][5])
 } // show_path(char[][5])
 
 void show_maze(char maze[5][5]) {
+    int start[2], end[2];
 	for (int i = 0; i < 5; i++) {
 		for (int j = 0; j < 5; j++) {
 			printf("%c ", maze[i][j]);
+			if (maze[i][j] == 'S') start[0] = i, start[1] = j;
+			if (maze[i][j] == 'E') end[0] = i, end[1] = j;
 		}
 		printf("\n");
 	}
+	printf("start at: %d,%d\nend at: %d,%d\n", start[0], start[1], end[0], end[1]);
 } // show_maze(char[][5])
 
 int main()
@@ -67,7 +71,7 @@ int main()
 
 	printf("\n");
 	show_maze(maze); // output maze
-	printf("\nPath to complete maze:\n")
+	printf("\nPath to complete maze:\n");
 	create_path(maze, s_i, s_j);
 	show_path(maze); // output path
 	
