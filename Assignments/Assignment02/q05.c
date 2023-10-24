@@ -46,7 +46,7 @@ void ramanujan_hardy(int num)
 
 int main()
 {
-	int;
+	int n;
 	printf("Enter number 'n' to get magic numbers less than n^3: ");
 	scanf("%d", &n);
 
