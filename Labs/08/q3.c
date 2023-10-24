@@ -28,7 +28,7 @@ int main() {
 } // main()
 
 // thing. c has to be initialized with -1
-int count_recursions(char *str, char ch, int c) 
+int count_rec(char *s, char c, int i) 
 {
-    return (str == NULL) ? (!str) ? c+1 : c : count_recursions(strchr(str+1, ch), ch, c+1);
+    return (s == NULL) ? (!s) ? i+1 : i : count_rec(strchr(s+1, c), c, i+1);
 }
