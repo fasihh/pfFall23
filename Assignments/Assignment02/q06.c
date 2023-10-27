@@ -12,6 +12,7 @@ int main()
 	printf("Enter number of elements in array: ");
 	scanf("%d", &n);
 
+	// input
 	for (int i = 0; i < n; i++) {
 		printf("Enter element %d: ", i+1);
 		scanf("%d", &arr[i]);
@@ -20,16 +21,17 @@ int main()
 	printf("Enter sum: ");
 	scanf("%d", &sum);
 
-	// find pair for each number
+	// adding pairs in the array
 	for (int i = 0; i < n; i++) {
 		for (int j = i + 1; j < n; j++) {
 			if (arr[i] + arr[j] == sum) {
-				// add values as a pair to the pairs array
 				pairs[count++] = arr[j], pairs[count++] = arr[i];
 				break;
 			}
 		}
 	}
+
+	(count) ? printf("Pairs found\n") : printf("No pairs found");
 
 	// output pairs
 	for (int i = 0; i < count;) {
@@ -38,4 +40,4 @@ int main()
 	}
 
 	return 0;
-} // main()
+} // end main()
