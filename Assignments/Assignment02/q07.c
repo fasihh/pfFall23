@@ -12,7 +12,7 @@ void show(int arr[][2], int n)
 	for (int i = 0; i < n; i++) {
 		printf("%3d - %d\n", arr[i][0], arr[i][1]);
 	}
-} // show(int *[2], int)
+} // show(int [][2], int)
 
 void sort(int arr[][2], int n, int col, int order)
 {
@@ -30,7 +30,7 @@ void sort(int arr[][2], int n, int col, int order)
 			arr[j][!col] = temp2;
 		}
 	}
-} // sort(int *[2], int, int)
+} // sort(int [][2], int, int)
 
 int main()
 {
