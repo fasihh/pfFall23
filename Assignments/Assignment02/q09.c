@@ -9,7 +9,7 @@
 void show_spiral(int spiral[][100], int n)
 {
 	for (int i = 0; i < n && printf("\n"); i++) for (int j = 0; j < n; j++) printf("%-3d ", spiral[i][j]);
-} // end show_spiral(int *[100], int)
+} // end show_spiral(int [][100], int)
 
 void create_spiral(int spiral[][100], int n, int type) {
 	int p, j, dir, i = 0;
@@ -60,7 +60,7 @@ void create_spiral(int spiral[][100], int n, int type) {
 				break;
 		}
 	}
-} // end create_spiral(int *[100], int, int)
+} // end create_spiral(int [][100], int, int)
 
 int main() 
 {
