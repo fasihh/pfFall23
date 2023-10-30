@@ -29,7 +29,7 @@ void show_flights(int arr[][2])
 		);
 	}
 	printf("\n");
-} // end show_flights(int *[2])
+} // end show_flights(int [][2])
 
 void get_preference(int arr[][2])
 {
@@ -49,7 +49,7 @@ void get_preference(int arr[][2])
 		if (arr[i][0]) (i-9) ? printf("%s, ", days[i%5]) : printf("%s\n", days[i%5]);
 	}
 	printf("Best option for evening flight on %s for price %d\n\n", days[min_day], min);
-} // end get_preference(int *[2])
+} // end get_preference(int [][2])
 
 void get_flight(int arr[][2], int day) 
 {
