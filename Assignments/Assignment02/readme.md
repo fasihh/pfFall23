@@ -2,6 +2,7 @@
 # 23K-0018
 
 ## Q1
+![image](https://github.com/fasihh/pfFall23/assets/47947561/a5c7bb78-2a9a-4d7a-b64a-179c41054820)
 
 ## Q2
 ![image](https://github.com/fasihh/pfFall23/assets/47947561/0fc1b7f8-25c8-4d62-b025-368a93517847)
