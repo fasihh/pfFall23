@@ -23,6 +23,9 @@
 ![image](https://github.com/fasihh/pfFall23/assets/47947561/0d90caad-626b-4fe0-8494-6ea036cd6195)
 
 ## Q5
+![image](https://github.com/fasihh/pfFall23/assets/47947561/dbb74341-70f6-4152-b5e0-9c9036fd740c)
+### main
+![image](https://github.com/fasihh/pfFall23/assets/47947561/c8f2080c-2009-40f1-8118-29360db2382f)
 
 ## Q6
 ### main
