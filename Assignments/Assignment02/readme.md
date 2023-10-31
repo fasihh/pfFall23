@@ -32,6 +32,10 @@
 ![image](https://github.com/fasihh/pfFall23/assets/47947561/f690991c-f4b0-4cbc-9296-5ea351e8dbd5)
 
 ## Q7
+![image](https://github.com/fasihh/pfFall23/assets/47947561/27a9823d-e97c-4256-9c5b-634f86afb235)
+![image](https://github.com/fasihh/pfFall23/assets/47947561/fa6c6b93-c7a4-48d7-a4c9-b731aef11e77)
+### main
+![image](https://github.com/fasihh/pfFall23/assets/47947561/e69a1b8e-5e1d-4b3e-a04f-6c91e2eec04e)
 
 ## Q8
 ![WhatsApp Image 2023-10-31 at 19 56 54](https://github.com/fasihh/pfFall23/assets/47947561/d507d3fe-94c4-4a49-8090-f6085c29dc70)
