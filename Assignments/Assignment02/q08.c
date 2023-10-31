@@ -32,17 +32,16 @@ int persistence(int num)
 
 int main()
 {
-	int num;
+	char num[10];
 	while (1) {
 		printf("Enter number: ");
-		scanf("%d", &num);
+		gets(num);
+
+		// check if string length is 0 (EOF)
+		if (!strlen(num)) break;
 
 		// output
-		printf("\nPersistence of %d is %d\n", num, persistence(num));
-
-		// checking if nothing inputting i.e. EOF
-		char check = getch();
-		if (check == 13) break;
+		printf("\nPersistence of %s is %d\n", num, persistence(atoi(num)));
 	}
 	return 0;
 } // main()
