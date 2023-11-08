@@ -44,10 +44,9 @@ void print_grid(Player **grid)
 	for (int i = 0; i < cols; i++) printf("%-4d", i+1);
 	printf("\n");
 	for (int i = 0; i < rows; i++) {
-		for (int j = 0; j < cols; j++) {
-			if (!j) printf("%-2d", i+1);
+		printf("%-2d", i+1);
+		for (int j = 0; j < cols; j++)
 			printf("%-4c", grid[i][j].type);
-		}
 		printf("\n\n");
 	}
 } // end print_grid(Player **)
@@ -99,7 +98,6 @@ int main()
 			do {
 				system("cls");
 				print_grid(grid);
-				printf("%d\n", pos.x < 7 && pos.y < 6);
 				if (!valid) printf("-- Enter appropriate co-ords --\n\n");
 				pos = user_input(player);
 				valid = validate_move(grid, pos);
