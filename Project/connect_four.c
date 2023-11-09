@@ -74,13 +74,8 @@ void set_grid(Player **grid, Position pos, int turn)
 
 bool validate_move(Player **grid, Position pos)
 {
-	// boundary check
-    if (pos.x < 0 || pos.x >= cols || pos.y < 0 || pos.y >= rows) {
-        return false;
-    }
-
-    // check if free
-    return (grid[pos.y][pos.x].type == X);
+    // boundary check
+    return (pos.x < 0 || pos.x >= cols || pos.y < 0 || pos.y >= rows) ? false : grid[pos.y][pos.x].type == X;
 }
 
 int main()
