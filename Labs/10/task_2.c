@@ -8,9 +8,6 @@
 
 void swap(void *n1, void *n2, char type)
 {
-	// create a XOR mask for both values
-	// XOR the mask with each value to swap it
-
 	if (type == 'd' || type == 'f' || type == 'l')
 		*(long *)n1 ^= *(long *)n2, *(long *)n2 ^= *(long *)n1, *(long *)n1 ^= *(long *)n2;
 	else if (type == 'c')
