@@ -9,9 +9,13 @@
 void swap(void *n1, void *n2, char type)
 {
 	if (type == 'd' || type == 'f' || type == 'l')
-		*(long *)n1 ^= *(long *)n2, *(long *)n2 ^= *(long *)n1, *(long *)n1 ^= *(long *)n2;
+		*(long *)n1 ^= *(long *)n2;
+		*(long *)n2 ^= *(long *)n1;
+		*(long *)n1 ^= *(long *)n2;
 	else if (type == 'c')
-		*(char *)n1 ^= *(char *)n2, *(char *)n2 ^= *(char *)n1, *(char *)n1 ^= *(char *)n2;
+		*(char *)n1 ^= *(char *)n2;
+		*(char *)n2 ^= *(char *)n1;
+		*(char *)n1 ^= *(char *)n2;
 } // end swap()
 
 int main()
