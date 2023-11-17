@@ -90,10 +90,10 @@ int main()
 
 	fin:
 	update_frame(grid);
-	(player) ? printf("%c wins", P1) : printf("%c wins", P2);
+	(player) ? printf("%c wins", P1) : printf("%c wins", P2, player);
 	display_wins(player);
 
-	return 1;
+	return 0;
 } // end main()
 
 
@@ -235,8 +235,7 @@ int *save_win(int player)
 {
 	char line[BUFFER_SIZE], player1[BUFFER_SIZE], player2[BUFFER_SIZE];;
 	int *wins = (int *)calloc(2, sizeof(int));
-
-	FILE *f_ptr = fopen(f_name, "r");
+	FILE *f_ptr = fopen(f_name, "r+");
 
 	// if file exists
 	if (f_ptr != NULL) {
@@ -253,29 +252,29 @@ int *save_win(int player)
 		}
 
 		fclose(f_ptr);
-	}
+	} else wins[player] = 1; // setting to 1 if no file existed
 
 	// ending if DRAW
 	if (player == -1) return wins;
 
 	// writing new wins in file
-	
+
 	f_ptr = fopen(f_name, "w");
 
-	// converting integer to string
-	itoa(wins[0], player1, BUFFER_SIZE);
-	itoa(wins[1], player2, BUFFER_SIZE);
+	// if file can be opened
+	if (f_ptr != NULL) {
+		// adding wins to the line buffer
+		sprintf(line, "%d\n%d", wins[0], wins[1]);
 
-	// adding strings to the line buffer
-	sprintf(line, "%s\n%s", player1, player2);
+		// writing the lines in to the file
+		fprintf(f_ptr, line);
 
-	// writing the lines in to the file
-	fprintf(f_ptr, line);
-
-	fclose(f_ptr);
+		fclose(f_ptr);
+	}
 
 	return wins;
 } // end save_win()
+
 
 void display_wins(int player)
 {
