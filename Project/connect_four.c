@@ -89,7 +89,7 @@ int main()
 		}
 	}
 
-	fin:
+ fin:
 	update_frame(grid);
 	(player) ? printf("%c wins", P1) : printf("%c wins", P2, player);
 	display_wins(player);
