@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
+#include <string.h>
+
+#define BUFFER_SIZE 10
+#define f_name "wins.txt"
 
 typedef struct {
 	int y;
@@ -10,6 +14,85 @@ typedef struct {
 // default settings
 const char X = ' ', P1 = 'R', P2 = 'B';
 const int rows = 6, cols = 7;
+
+
+// create a game grid
+char **create_game_grid();
+
+// print the game grid
+void print_grid(char **grid);
+
+// update the frame by clearing the screen and printing the grid
+void update_frame(char **grid);
+
+// user input for the column number
+int user_input(int player);
+
+// validate a move in the specified column
+bool validate_move(char **grid, int col);
+
+// get the first empty row in a column
+int get_first_empty(char **grid, int col);
+
+// set the grid at the specified column and row with the player's character
+void set_grid(char **grid, int col, char player_char);
+
+// check the win status of the game after a move
+bool game_win_status(char **grid, int col, char player_char);
+
+// check if the game is a draw
+bool game_draw_status(char **grid);
+
+// extracts player wins from the wins file
+int *save_win(int player);
+
+// shows the wins for each player
+void display_wins(int player);
+
+
+int main()
+{
+	int player, col;
+	bool valid = true;
+	char **grid = create_game_grid();
+	
+	// game loop
+	while (1) {
+		// for each player
+		for (player = 0; player < 2; player++) {
+			char player_char = (player) ? P1 : P2;
+
+			// loop until valid input
+			do {
+				update_frame(grid);
+				if (!valid) printf("-- Enter appropriate column number --\n\n");
+				col = user_input(player);
+				valid = validate_move(grid, col);
+			} while (!valid);
+
+			// set to grid
+			set_grid(grid, col, player_char);
+
+			// check if win or draw
+			bool win = game_win_status(grid, col, player_char);
+			bool draw = game_draw_status(grid);
+			if (win) {
+				goto fin;
+			} else if (draw) {
+				printf("DRAW");
+				display_wins(player);
+				return 0;
+			}
+		}
+	}
+
+	fin:
+	update_frame(grid);
+	(player) ? printf("%c wins", P1) : printf("%c wins", P2);
+	display_wins(player);
+
+	return 1;
+} // end main()
 
 
 char **create_game_grid()
@@ -146,43 +229,49 @@ bool game_draw_status(char **grid)
 } // end game_draw_status()
 
 
-int main()
+int *save_win(int player)
 {
-	int player, col;
-	bool valid = true;
-	char **grid = create_game_grid();
-	
-	// game loop
-	while (1) {
-		// for each player
-		for (player = 0; player < 2; player++) {
-			char player_char = (player) ? P1 : P2;
+	char line[BUFFER_SIZE], player1[BUFFER_SIZE], player2[BUFFER_SIZE];;
+	int *wins = (int *)calloc(2, sizeof(int));
 
-			// loop until valid input
-			do {
-				update_frame(grid);
-				if (!valid) printf("-- Enter appropriate column number --\n\n");
-				col = user_input(player);
-				valid = validate_move(grid, col);
-			} while (!valid);
+	FILE *f_ptr = fopen(f_name, "r");
 
-			// set to grid
-			set_grid(grid, col, player_char);
+	// if file exists
+	if (f_ptr != NULL) {
+		for (int i = 0;!feof(f_ptr); i++) {
+			// reading win from file
+			fgets(line, BUFFER_SIZE, f_ptr);
 
-			// check if win or draw
-			bool win = game_win_status(grid, col, player_char);
-			bool draw = game_draw_status(grid);
-			if (win) {
-				goto fin;
-			} else if (draw) {
-				printf("DRAW");
-				return 0;
-			}
+			// trimming string
+			line[strcspn(line, "\n")] = 0;
+
+			// adding into win of the player
+			wins[i] = atoi(line) + (i == player);
 		}
+
+		fclose(f_ptr);
 	}
 
-	fin:
-	update_frame(grid);
-	(player) ? printf("%c wins", P1) : printf("%c wins", P2);
-	return 0;
-} // end main()
+	f_ptr = fopen(f_name, "w");
+
+	// converting integer to string
+	itoa(wins[0], player1, BUFFER_SIZE);
+	itoa(wins[1], player2, BUFFER_SIZE);
+
+	// adding strings to the line buffer
+	sprintf(line, "%s\n%s", player1, player2);
+
+	// writing the lines in to the file
+	fprintf(f_ptr, line);
+
+	fclose(f_ptr);
+
+	return wins;
+} // end save_win()
+
+void display_wins(int player)
+{
+	// get wins from the file
+	int *wins = save_win(player);
+	printf("\nTotal %c wins: %d\nTotal %c wins: %d", P1, wins[1], P2, wins[0]);
+} // end display_wins()
