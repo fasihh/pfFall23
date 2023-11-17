@@ -47,6 +47,7 @@ void print_grid(char **grid)
 	}
 } // end print_grid(Player **)
 
+
 void update_frame(char **grid)
 {
 	// clear screen and print grid
@@ -141,12 +142,14 @@ bool game_win_status(char **grid, int col, char player_char)
 	return false;
 }
 
+
 bool game_draw_status(char **grid)
 {
 	// if top row is not full return false
 	for (int i = 0; i < cols; i++) if (grid[0][i] == X) return false;
 	return true;
 }
+
 
 int main()
 {
