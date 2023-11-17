@@ -17,7 +17,7 @@ char **create_game_grid()
 	// creates double pointer for number of rows
 	char **grid = (char **)malloc(sizeof(char *) * rows);
 
-	// creates single pointer and sets them in all rows
+	// creates single pointers and sets them in all rows
 	for (int i = 0; i < rows; i++) grid[i] = (char *)malloc(sizeof(char) * cols);
 
 	// initializing as default
@@ -51,10 +51,10 @@ void update_frame(char **grid)
 } // end update_frame()
 
 
-int user_input(int turn)
+int user_input(int player)
 {
 	int col;
-	printf("Enter column number for Player %d: ", turn+1);
+	printf("Enter column number for Player %d: ", player+1);
 	scanf("%d", &col);
 
 	return col-1;
