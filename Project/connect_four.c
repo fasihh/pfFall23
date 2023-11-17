@@ -2,17 +2,14 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-const char X = ' ';
-const char P1 = 'R';
-const char P2 = 'B';
-
-const int rows = 6;
-const int cols = 7;
-
 typedef struct {
 	int y;
 	int x;
 } Position;
+
+// default settings
+const char X = ' ', P1 = 'R', P2 = 'B';
+const int rows = 6, cols = 7;
 
 
 char **create_game_grid()
@@ -21,9 +18,7 @@ char **create_game_grid()
 	char **grid = (char **)malloc(sizeof(char *) * rows);
 
 	// creates single pointer and sets them in all rows
-	for (int i = 0; i < rows; i++) {
-		grid[i] = (char *)malloc(sizeof(char) * cols);
-	}
+	for (int i = 0; i < rows; i++) grid[i] = (char *)malloc(sizeof(char) * cols);
 
 	// initializing as default
 	for (int i = 0; i < rows; i++) 
@@ -53,7 +48,7 @@ void update_frame(char **grid)
 	// clear screen and print grid
 	system("cls");
 	print_grid(grid);
-}
+} // end update_frame()
 
 
 int user_input(int turn)
@@ -70,7 +65,7 @@ bool validate_move(char **grid, int col)
 {
     // range check and overflow check
     return (col < cols && col >= 0) ? grid[0][col] == X : false;
-}
+} // end validate_move()
 
 
 int get_first_empty(char **grid, int col)
@@ -81,7 +76,7 @@ int get_first_empty(char **grid, int col)
 		if (grid[i][col] != X) continue;
 		else break;
 	return i;
-}
+} // end get_first_empty()
 
 
 void set_grid(char **grid, int col, char player_char)
@@ -140,7 +135,7 @@ bool game_win_status(char **grid, int col, char player_char)
 	}
 
 	return false;
-}
+} // end game_win_status()
 
 
 bool game_draw_status(char **grid)
@@ -148,7 +143,7 @@ bool game_draw_status(char **grid)
 	// if top row is not full return false
 	for (int i = 0; i < cols; i++) if (grid[0][i] == X) return false;
 	return true;
-}
+} // end game_draw_status()
 
 
 int main()
