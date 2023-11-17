@@ -2,6 +2,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
+#include <Windows.h>
 
 #define BUFFER_SIZE 10
 #define f_name "wins.txt"
@@ -281,4 +282,7 @@ void display_wins(int player)
 	// get wins from the file
 	int *wins = save_win(player);
 	printf("\nTotal %c wins: %d\nTotal %c wins: %d", P1, wins[1], P2, wins[0]);
+
+	// to not immediately close the program at the end
+	Sleep(10000);
 } // end display_wins()
