@@ -10,10 +10,6 @@ const int rows = 6;
 const int cols = 7;
 
 typedef struct {
-	char type;
-} Player;
-
-typedef struct {
 	int y;
 	int x;
 } Position;
