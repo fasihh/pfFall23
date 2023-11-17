@@ -76,7 +76,9 @@ int main()
 			// check if win or draw
 			bool win = game_win_status(grid, col, player_char);
 			bool draw = game_draw_status(grid);
+
 			if (win) {
+				// using goto to exit multiple nested loops
 				goto fin;
 			} else if (draw) {
 				printf("DRAW");
@@ -246,12 +248,18 @@ int *save_win(int player)
 			line[strcspn(line, "\n")] = 0;
 
 			// adding into win of the player
-			wins[i] = atoi(line) + (i == player);
+			// ignoring if -1 (DRAW)
+			wins[i] = atoi(line) + (player != -1 && i == player);
 		}
 
 		fclose(f_ptr);
 	}
 
+	// ending if DRAW
+	if (player == -1) return wins;
+
+	// writing new wins in file
+	
 	f_ptr = fopen(f_name, "w");
 
 	// converting integer to string
