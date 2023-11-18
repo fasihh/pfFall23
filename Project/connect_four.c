@@ -107,9 +107,7 @@ char **create_game_grid()
 	for (int i = 0; i < rows; i++) grid[i] = (char *)malloc(sizeof(char) * cols);
 
 	// initializing as default
-	for (int i = 0; i < rows; i++) 
-		for (int j = 0; j < cols; j++)
-			grid[i][j] = X;
+	for (int i = 0; i < rows; i++) memset(grid[i], X, cols);
 
 	return grid;
 } // end create_game_grid()
