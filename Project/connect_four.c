@@ -48,8 +48,6 @@ int *save_win(int player);
 // shows the wins for each player
 void display_wins(int player);
 
-// set every function to use get_player_char instead
-
 
 int main()
 {
