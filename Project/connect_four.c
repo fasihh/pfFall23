@@ -237,6 +237,7 @@ void game_end_display(char **grid, int player, bool type)
 	display_wins(player);
 }
 
+
 int *save_win(int player)
 {
 	char line[BUFFER_SIZE], player1[BUFFER_SIZE], player2[BUFFER_SIZE];;
