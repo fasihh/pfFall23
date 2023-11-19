@@ -7,11 +7,6 @@
 #define BUFFER_SIZE 10
 #define f_name "wins.txt"
 
-typedef struct {
-	int y;
-	int x;
-} Position;
-
 // default settings
 const char X = ' ', P1 = 'R', P2 = 'B';
 const int rows = 6, cols = 7;
@@ -36,13 +31,16 @@ bool validate_move(char **grid, int col);
 int get_first_empty(char **grid, int col);
 
 // set the grid at the specified column and row with the player's character
-void set_grid(char **grid, int col, char player_char);
+void set_grid(char **grid, int col, int player);
 
 // check the win status of the game after a move
-bool game_win_status(char **grid, int col, char player_char);
+bool game_win_status(char **grid, int col, int player);
 
 // check if the game is a draw
 bool game_draw_status(char **grid);
+
+// displays relevant game end screen to player
+void game_end_display(char **grid, int player, bool type);
 
 // extracts player wins from the wins file
 int *save_win(int player);
@@ -50,19 +48,28 @@ int *save_win(int player);
 // shows the wins for each player
 void display_wins(int player);
 
+// set every function to use get_player_char instead
+
 
 int main()
 {
 	int player, col;
-	bool valid = true;
-	char **grid = create_game_grid();
-	
+	bool valid = true, win = false;
+	char player_char, **grid = create_game_grid();
+
 	// game loop
-	while (1) {
+	while (!win) {
+
+		// check at the start if draw
+		// this was done to avoid out of bound errors mid game
+		if (game_draw_status(grid)) {
+			// display end screen for DRAW
+			game_end_display(grid, player, false);
+			return 0;
+		}
+
 		// for each player
 		for (player = 0; player < 2; player++) {
-			char player_char = (player) ? P1 : P2;
-
 			// loop until valid input
 			do {
 				update_frame(grid);
@@ -72,28 +79,19 @@ int main()
 			} while (!valid);
 
 			// set to grid
-			set_grid(grid, col, player_char);
+			set_grid(grid, col, player);
 
 			// check if win or draw
-			bool win = game_win_status(grid, col, player_char);
-			bool draw = game_draw_status(grid);
+			win = game_win_status(grid, col, player);
 
 			if (win) {
-				// using goto to exit multiple nested loops
-				goto fin;
-			} else if (draw) {
-				printf("DRAW");
-				display_wins(player);
-				return 0;
+				break;
 			}
 		}
 	}
-
- fin:
-	update_frame(grid);
-	(player) ? printf("%c wins", P1) : printf("%c wins", P2, player);
-	display_wins(player);
-
+	
+	// display screen for WIN of player
+	game_end_display(grid, player, true);
 	return 0;
 } // end main()
 
@@ -163,17 +161,18 @@ int get_first_empty(char **grid, int col)
 } // end get_first_empty()
 
 
-void set_grid(char **grid, int col, char player_char)
+void set_grid(char **grid, int col, int player)
 {
 	// get row where empty slot
 	int row = get_first_empty(grid, col);
-	grid[row][col] = player_char;
+	grid[row][col] = (player) ? P1 : P2;
 } // end set_grid()
 
 
-bool game_win_status(char **grid, int col, char player_char)
+bool game_win_status(char **grid, int col, int player)
 {
 	// getting row of current player character
+	char player_char = (player) ? P1 : P2;
 	int row = get_first_empty(grid, col)+1;
 
 	// down
@@ -200,8 +199,9 @@ bool game_win_status(char **grid, int col, char player_char)
 				return true;
 	}
 
+
 	// up left
-	if (col - 3 >= 0 && rows - 3 >= 0) {
+	if (col - 3 >= 0 && row - 3 >= 0) {
 		if (grid[row-1][col-1] == player_char && grid[row-2][col-2] == player_char && grid[row-3][col-3] == player_char)
 				return true;
 	}
@@ -229,6 +229,13 @@ bool game_draw_status(char **grid)
 	return true;
 } // end game_draw_status()
 
+
+void game_end_display(char **grid, int player, bool type)
+{
+	update_frame(grid);
+	(type) ? printf("%c WINS", (player) ? P1 : P2) : printf("DRAW");
+	display_wins(player);
+}
 
 int *save_win(int player)
 {
