@@ -51,7 +51,7 @@ double time_arr(int **arr, int N, int M)
 
 int main()
 {
-	int M = 1000, N = 1000;
+	int M, N;
 
 	printf("Enter M: ");
 	scanf("%d", &M);
