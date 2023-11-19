@@ -137,11 +137,11 @@ void update_frame(char **grid)
 
 int user_input(int player)
 {
-	int col;
+	char col;
 	printf("Enter column number for Player %d: ", player+1);
-	scanf("%d", &col);
+	scanf(" %c", &col);
 
-	return col-1;
+	return col-'1';
 } // user_input(int)
 
 
