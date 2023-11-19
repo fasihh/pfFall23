@@ -82,9 +82,7 @@ int main()
 			// check if win or draw
 			win = game_win_status(grid, col, player);
 
-			if (win) {
-				break;
-			}
+			if (win) break;
 		}
 	}
 	
