@@ -35,12 +35,21 @@ void input_students(Student *students, int size)
     }
 } // end input_students()
 
-void print_students(Student *students, int size)
+void print_students_year(Student *students, int size, char year[5])
 {
     for (int i = 0; i < size; i++) {
-        printf("\n\nStudent [%d]:\nName: %s", i+1, students[i].name);
+        if (!strcmp(students[i].year, year))
+            printf("\n\nStudent [%d]:\nName: %s", i+1, students[i].name);
     }
-} // end print_students()
+} // end print_students_year()
+
+void print_students_roll(Student *students, int size, char roll_num[9])
+{
+    for (int i = 0; i < size; i++) {
+        if (!strcmp(students[i].roll_num, roll_num))
+            printf("\n\nStudent [%d]:\nName: %s", i+1, students[i].name);
+    }
+} // end print_students_roll()
 
 int main()
 {
@@ -53,8 +62,18 @@ int main()
     
     // allocating N-students array
     Student *students = (Student *)malloc(sizeof(Student) * N);
+    
     input_students(students, N);
-    print_students(students, N);
+
+    char year[5];
+    printf("Enter year: ");
+    scanf("%s", &year);
+    print_students_year(students, N, year);
+
+    char roll[9];
+    printf("Enter roll: ");
+    scanf("%s", &roll);
+    print_students_roll(students, N, roll);
 
     return 0;
 } // end main()
