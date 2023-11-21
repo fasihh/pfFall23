@@ -46,8 +46,10 @@ void print_students_year(Student *students, int size, char year[5])
 void print_students_roll(Student *students, int size, char roll_num[9])
 {
     for (int i = 0; i < size; i++) {
-        if (!strcmp(students[i].roll_num, roll_num))
-            printf("\n\nStudent [%d]:\nName: %s", i+1, students[i].name);
+        if (!strcmp(students[i].roll_num, roll_num)) {
+            printf("\n\nStudent [%d]:\nName: %s\nDepartment: %s\nCourse: %s\nYear: %s", i+1, students[i].name, students[i].department, students[i].course, students[i].year);
+            break;
+        }
     }
 } // end print_students_roll()
 
