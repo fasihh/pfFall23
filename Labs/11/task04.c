@@ -17,7 +17,7 @@ void show_employees(struct Employee employees[10])
     for (int i = 0; i < 10; i++) {
         printf("Name: %s\nSalary: $%.2f\nHours: %d\n\n", employees[i].name, employees[i].salary, employees[i].hours);
     }
-}
+} // end show_employees()
 
 void increase_salary(struct Employee employees[10])
 {
@@ -26,7 +26,7 @@ void increase_salary(struct Employee employees[10])
         else if (employees[i].hours >= 10) employees[i].salary += 100;
         else if (employees[i].hours >= 8) employees[i].salary += 50;
     }
-}
+} // end increase_salary()
 
 int main()
 {
@@ -46,6 +46,5 @@ int main()
     increase_salary(employees);
     show_employees(employees);
     
-    
     return 0;
-}
+} // end main()
