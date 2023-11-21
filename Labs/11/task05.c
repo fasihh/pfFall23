@@ -1,3 +1,9 @@
+/*
+ * Name: Fasih Hasan Khan
+ * Date: 21/11/23
+ * Desc: Creating nested structures and displaying data from them
+ */
+
 #include <stdio.h>
 #include <string.h>
 
@@ -29,4 +35,4 @@ int main()
 	);
 
 	return 0;
-}
+} // end main()
