@@ -38,7 +38,7 @@ void input_students(Student *students, int size)
 void print_students(Student *students, int size)
 {
     for (int i = 0; i < size; i++) {
-        printf("\n\nStudent [%d]:\nName: %s\nDepartment: %s\nCourse: %s\nYear: %s", i+1, students[i].name, students[i].department, students[i].course, students[i].year);
+        printf("\n\nStudent [%d]:\nName: %s", i+1, students[i].name);
     }
 } // end print_students()
 
