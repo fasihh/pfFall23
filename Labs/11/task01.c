@@ -42,6 +42,7 @@ void print_students_year(Student *students, int size, char year[5])
         if (!strcmp(students[i].year, year))
             printf("\n\nStudent [%d]:\nName: %s", i+1, students[i].name);
     }
+    printf("\n");
 } // end print_students_year()
 
 void print_students_roll(Student *students, int size, char roll_num[9])
