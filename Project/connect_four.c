@@ -91,8 +91,9 @@ int main()
 	color_char((player) ? P1 : P2);
 	printf(" WINS");
 
-	// resetting color scheme
-	system("Color 07");
+	// reset console color
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+
 	return 0; // end
 } // end main()
 
