@@ -1,7 +1,7 @@
 /*
  * Creator: Fasih Hasan Khan
- * Date: 21/11/23
- * Description: Add 45 days to a struct of date inputted by the user
+ * Date: 26/11/23
+ * Description: making a library management system using structs
  */
 
 #include <stdio.h>
