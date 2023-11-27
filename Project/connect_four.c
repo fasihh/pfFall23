@@ -17,7 +17,7 @@
 const int rows = 6, cols = 7;
 
 // create a game grid
-char **create_game_grid(); // by Ali, modi
+char **create_game_grid(); // by Ali, modification by Fasih
 
 // uses the window lib to color the text
 void color_char(char player); // by Fasih
