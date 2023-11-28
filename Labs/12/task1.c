@@ -13,25 +13,25 @@
 int format_line(char str[100])
 {
     char delim[2] = ",";
-    int rows = 0;
-    char *row = strtok(str, delim);
+    int cols = 0;
+    char *col = strtok(str, delim);
 
     // separating words with commas
-    while (row != NULL) {
-        rows++;
-        row[strcspn(row, "\n")] = 0; // removing new line from the end of file line
-        printf("%-14s | ", row); // printing in correct format
-        row = strtok(NULL, delim);
+    while (col != NULL) {
+        cols++;
+        col[strcspn(col, "\n")] = 0; // removing new line from the end of file line
+        printf("%-14s | ", col); // printing in correct format
+        col = strtok(NULL, delim);
     }
 
     printf("\n");
-    return rows;
+    return cols;
 } // end format_line()
 
 void read_file(FILE *fptr)
 {
     char buffer[MAX_BUFFER_SIZE];
-    int cols = 0, rows = 0;
+    int rows = 0, cols = 0;
 
     // reading all lines
     while (!feof(fptr)) {
@@ -39,7 +39,7 @@ void read_file(FILE *fptr)
         cols++;
     }
 
-    printf("\n\nrows: %d, cols: %d", rows-1, cols);
+    printf("\n\nrows: %d, cols: %d", cols, rows);
 } // end read_stable_file()
 
 int main()
