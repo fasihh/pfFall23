@@ -9,7 +9,6 @@
 #include <stdlib.h>
 
 #define MAX_BUFFER_SIZE 100
-#define MAX_FILE_SIZE 500
 
 int format_line(char str[100])
 {
