@@ -92,5 +92,9 @@ int main(int argc, char const *argv[])
 	printf("\nSubmatrix with maximum values:\n");
 	print_matrix(sub_mat, n/2);
 
+	free(sub_max);
+	free(*mat);
+	free(mat);
+
 	return 0;
 }
