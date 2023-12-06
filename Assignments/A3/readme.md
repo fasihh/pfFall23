@@ -19,3 +19,6 @@
 ![image](https://github.com/fasihh/pfFall23/assets/47947561/672be212-83c9-42f0-a32e-f3abcc92beea)
 ### Files after
 ![image](https://github.com/fasihh/pfFall23/assets/47947561/317a7ea2-220a-4bc8-a9f8-67538415827b)
+
+## Question 4
+![image](https://github.com/fasihh/pfFall23/assets/47947561/54070884-8daa-4cd0-b2a7-89cf6b385d32)
